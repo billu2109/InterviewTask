@@ -1,0 +1,29 @@
+
+{% comment %}
+{{ form.Policy.Preferences.PluginsPreferences.item }}{% endcomment %}
+
+<table border="2">
+    <tr>
+        <th>Plugin Name</th>
+        <th>Plugin Id</th>
+        <th>Plugin fullname</th>
+        <th>preference Name</th>
+        <th>Preference Type</th>
+        <th>Preference values</th>
+        <th>Selected Values</th>
+    </tr>
+    {% for x in dict1 %}
+        <tr>
+            <td>{{ x.pluginName }}</td>
+            <td>{{ x.pluginId }}</td>
+            <td>{{ x.fullName }}</td>
+        <td>{{ x.preferenceName }}</td>
+        <td>{{ x.preferenceType }}</td>
+        <td>{{ x.preferenceValues }}</td>
+        <td>{{ x.selectedValue }}</td>
+
+
+        </tr>
+
+    {% endfor %}
+</table>
